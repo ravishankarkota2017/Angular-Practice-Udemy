@@ -1,3 +1,17 @@
 
-<app-title></app-title>
-<hr style="border-color: red">
+
+ <!-- <input type="text"
+ name="machineName"
+ id="machineName" 
+ class="form-control"
+ placeholder="Enter machine name(use event to bind)"
+ (input)="onServerNameEnter($event)">
+ <br/> -->
+<div class="serverdetails">
+    ip Address : {{ ipAddress }} {{ 'is dynamic IP' }} <br/>
+    Serial No : {{ machineSerialNo }} <br/>
+    Machine Status : 
+    <span [ngStyle]="{ backgroundColor:getColor() }"
+          [ngClass]="{ online: machineStatus === 'Online', offline: machineStatus === 'Offline' }">
+        {{ getMachineStatus() }}</span>
+</div>

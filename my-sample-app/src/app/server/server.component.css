@@ -1,0 +1,15 @@
+.serverdetails{
+  border: 1px solid rebeccapurple;
+  padding: 10px;  
+  width: max-content;
+  margin-bottom: 20px;
+  font-family : Verdana, Geneva, Tahoma, sans-serif;
+  color:sienna;
+  background-color: azure;
+}
+.online{
+  color:white;
+}
+.offline{
+  color:yellow;
+}

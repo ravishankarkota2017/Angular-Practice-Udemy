@@ -2,12 +2,14 @@ import { Component } from "@angular/core";
 
 @Component(
     {
-        selector: 'app-title',
-        template: '<h5>Ramana Sadguru Rayane !</h5> <h6>Ram Nam Sathya Hai!</h6>',
-        styles:[`h5{
-            color:blue
+        selector: '[app-title]',
+        template: '<h3> Zenmonics Devices</h3> <i>information about  machines</i>',
+        styles:[`h3{
+            color:blue;
+            font-weight:bold;
+            width:280px;    
         }`,
-       `h6{
+       `i{
             color:dodgerblue
         }`]
     }

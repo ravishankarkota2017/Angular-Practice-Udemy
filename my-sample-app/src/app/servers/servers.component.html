@@ -1,4 +1,25 @@
+
+<div app-title></div>
+<hr style="border-color: red">
 <app-server></app-server>
 <app-server></app-server>
-<app-warning-alert></app-warning-alert>
-<app-success-alert></app-success-alert>
+<app-server></app-server>
+<p [innerText]="newMachineStatus" class="text-primary"></p>
+
+<input type="text"
+name="machineName"
+class="form-control"
+id="machineName" 
+placeholder="Enter machine name"
+[(ngModel)]="machineName">
+<br/>
+
+<button class="btn btn-primary" 
+    [disabled]="!allowNewMachine" 
+    (click)="onAddMachine()">
+    Add Machine</button>
+
+
+
+<app-warning-alert [hidden]="true"></app-warning-alert>
+<app-success-alert [hidden]="true"></app-success-alert>

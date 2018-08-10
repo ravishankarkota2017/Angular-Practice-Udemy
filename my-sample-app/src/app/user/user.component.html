@@ -1,0 +1,13 @@
+<div style="margin-top:20px">
+  <label style="padding-right:5px">User Name </label>
+  <input type="text"
+  class="input-sm"
+  [(ngModel)]="username"
+  style="width:150px;margin-right:20px">
+  
+  <button class="btn btn-primary" 
+    [disabled]="username === ''" 
+    (click)="username =''">
+    Reset User</button>
+    <p [hidden]="username === ''"><b>{{username}}</b> </p>
+</div>
