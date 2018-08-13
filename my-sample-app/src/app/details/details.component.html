@@ -1,14 +1,38 @@
-<hr>
+<hr style="border-color: purple">
 <div class="container">
- <div class="row">
-    <div class="col-md-12">
-        <button class="btn btn-primary">Display Details</button>
-        <div ng-if="get">
-                <label for="">Details:</label>
-                <p class="text-primary">Ram nam japo.</p>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary" (click)="onDisplayDetailsClick()">{{!showDetails?'Display':'Hide'}} 7 Habits</button>
+            <br>
+            <div *ngIf="showDetails">
+                <p class="text-primary">
+                    <span class="page-header">7 Habits of Highly Effective People</span>
+                </p>
+                <ol>
+                    <li>Be Proactive</li>
+                    <li>Begin with the End in Mind</li>
+                    <li>Put First Things First</li>
+                    <li>Think Win-Win</li>
+                    <li>Seek First to Understand, Then to Be Understood</li>
+                    <li>Synergize</li>
+                    <li>Sharpen the Saw</li>
+                </ol>
+
+            </div>
+            <div class="list-unstyled" *ngIf="logentries.length > 0">
+                <h4>Log Entries</h4>
+                <ul>
+                    <li *ngFor="let entry of logentries; let i = index">
+                            <span 
+                            [ngClass]="{ higherLogEntry: i >= 4 }"
+                            [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'white' }">
+                            {{ entry }}
+                        </span> 
+                    </li>
+                </ul>
+            </div>
+
         </div>
-           
     </div>
- </div>
-      
+
 </div>

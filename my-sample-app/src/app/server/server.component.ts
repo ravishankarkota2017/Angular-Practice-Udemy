@@ -15,7 +15,7 @@ export class ServerComponent{
        this.machineStatus = Math.random() > 0.5 ? 'Offline' : 'Online'
    }
 
-   getMachineStatus(): string { 
+   getMachineStatus(): string {
         return this.machineStatus;
    }
    getColor(){
