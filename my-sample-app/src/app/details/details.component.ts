@@ -10,7 +10,7 @@ import { Component } from "@angular/core";
 export class DetailsComponent{
 
     private showDetails:boolean = false;
-    public logentries:string[] = [""];
+    public logentries:string[] = [];
     public now: Date = new Date();
     public currentDateTime: Date;
 
