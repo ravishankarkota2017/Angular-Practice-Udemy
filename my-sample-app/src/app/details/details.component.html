@@ -17,22 +17,22 @@
                     <li>Synergize</li>
                     <li>Sharpen the Saw</li>
                 </ol>
-
+              <div *ngIf="expression"></div>
             </div>
             <div class="list-unstyled" *ngIf="logentries.length > 0">
                 <h4>Log Entries</h4>
                 <ul>
                     <li *ngFor="let entry of logentries; let i = index">
-                            <span 
+                            <span
                             [ngClass]="{ higherLogEntry: i >= 4 }"
-                            [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'white' }">
+                            [ngStyle]="{ 'backgroundColor': i >= 4 ? 'blue' : 'white' }">
                             {{ entry }}
-                        </span> 
+                        </span>
                     </li>
                 </ul>
             </div>
 
         </div>
     </div>
-
+    
 </div>
